@@ -1,0 +1,874 @@
+.eid-app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #0f172a;
+}
+
+.eid-lang-fab {
+  position: fixed;
+  top: 14px;
+  right: 14px;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  pointer-events: auto;
+}
+
+@media (min-width: 768px) {
+  .eid-lang-fab {
+    top: 18px;
+    right: 18px;
+  }
+}
+
+.eid-lang-btn {
+  width: 54px;
+  height: 44px;
+  border-radius: 14px;
+  border: 1px solid rgba(0, 212, 255, 0.45);
+  background: rgba(2, 6, 23, 0.55);
+  color: rgba(255, 255, 255, 0.92);
+  font-weight: 900;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+  backdrop-filter: blur(12px);
+  box-shadow:
+    0 12px 28px rgba(0, 0, 0, 0.35),
+    0 0 18px rgba(0, 212, 255, 0.12);
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.eid-lang-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 16px 34px rgba(0, 0, 0, 0.42),
+    0 0 26px rgba(0, 212, 255, 0.18);
+}
+
+.eid-lang-btn.active {
+  border-color: rgba(0, 255, 154, 0.55);
+  background: linear-gradient(135deg, #00ff9a, #22c55e, #00d4ff);
+  color: #02130d;
+  box-shadow:
+    0 0 14px rgba(0, 255, 154, 0.55),
+    0 0 32px rgba(0, 212, 255, 0.25),
+    0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+.eid-lang-btn:focus-visible {
+  outline: 3px solid rgba(0, 212, 255, 0.75);
+  outline-offset: 4px;
+}
+
+.eid-hero {
+  padding: 3rem 1.5rem 2.5rem;
+  background: radial-gradient(circle at top left, #22c55e 0, #16a34a 25%, #047857 55%, #022c22 100%);
+  color: #ecfdf5;
+  text-align: center;
+}
+
+.eid-brand {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.8rem;
+}
+
+.eid-brand-row {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.9rem;
+}
+
+.eid-brand-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.9rem;
+  padding: 0.15rem;
+}
+
+.eid-logo {
+  height: 84px;
+  width: auto;
+  object-fit: contain;
+  filter:
+    drop-shadow(0 10px 24px rgba(0, 0, 0, 0.35))
+    drop-shadow(0 0 18px rgba(34, 197, 94, 0.25));
+}
+
+@media (max-width: 420px) {
+  .eid-logo {
+    height: 72px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eid-logo {
+    height: 104px;
+  }
+}
+
+@media (min-width: 768px) {
+  .eid-hero {
+    padding: 4rem 3rem 3rem;
+  }
+}
+
+.eid-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.8);
+  border: 1px solid rgba(167, 243, 208, 0.5);
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+}
+
+.eid-hero-title {
+  font-size: 2.1rem;
+  line-height: 1.15;
+  margin: 0 0 1rem;
+  letter-spacing: -0.03em;
+}
+
+@media (min-width: 768px) {
+  .eid-hero-title {
+    font-size: 2.8rem;
+  }
+}
+
+.eid-highlight {
+  color: #bbf7d0;
+}
+
+.eid-hero-subtitle {
+  margin: 0 auto 2rem;
+  max-width: 34rem;
+  font-size: 0.95rem;
+  color: #dcfce7;
+}
+
+.eid-hero-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr);
+  gap: 1.25rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  .eid-hero-grid {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+  }
+}
+
+.eid-hero-visual-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.eid-hero-visual {
+  border-radius: 1.6rem;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 255, 154, 0.28),
+    rgba(34, 197, 94, 0.18),
+    rgba(0, 212, 255, 0.18)
+  );
+  box-shadow:
+    0 22px 70px rgba(0, 0, 0, 0.35),
+    0 0 0 1px rgba(187, 247, 208, 0.55) inset,
+    0 0 40px rgba(34, 197, 94, 0.18);
+  aspect-ratio: 16 / 9;
+  min-height: 260px;
+}
+
+.eid-hero-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 10%, rgba(34, 197, 94, 0.22), transparent 55%),
+    radial-gradient(circle at 80% 80%, rgba(0, 212, 255, 0.16), transparent 55%);
+  pointer-events: none;
+  opacity: 0.9;
+}
+
+.eid-hero-visual::after {
+  content: '';
+  position: absolute;
+  inset: 10px;
+  border-radius: calc(1.6rem - 10px);
+  background: rgba(2, 6, 23, 0.72);
+  box-shadow: 0 0 0 1px rgba(148, 163, 184, 0.35) inset;
+  pointer-events: none;
+}
+
+.eid-hero-visual img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  z-index: 1;
+  border-radius: calc(1.6rem - 10px);
+}
+
+@media (min-width: 768px) {
+  .eid-hero-visual {
+    aspect-ratio: 16 / 8;
+    min-height: 320px;
+  }
+}
+
+.eid-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.4rem;
+  border: 1px solid rgba(16, 185, 129, 0.6);
+  text-align: left;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
+.eid-card.primary {
+  background: linear-gradient(145deg, rgba(22, 163, 74, 0.95), rgba(6, 95, 70, 0.98));
+}
+
+.eid-card h2,
+.eid-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+}
+
+.eid-card ul {
+  margin: 0;
+  padding-left: 1.1rem;
+  font-size: 0.95rem;
+}
+
+.eid-card li + li {
+  margin-top: 0.35rem;
+}
+
+.eid-card-subtitle {
+  margin: 0 0 1rem;
+  font-size: 0.85rem;
+  color: #bbf7d0;
+}
+
+.countdown-card {
+  background: rgba(15, 23, 42, 0.7);
+}
+
+.eid-countdown {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.eid-countdown-item {
+  flex: 1;
+  padding: 0.6rem 0.4rem;
+  border-radius: 0.9rem;
+  background: radial-gradient(circle at top, #16a34a, #022c22);
+  text-align: center;
+}
+
+.eid-countdown-item .value {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.eid-countdown-item .label {
+  display: block;
+  margin-top: 0.1rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.eid-countdown-closed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  color: #bbf7d0;
+}
+
+.eid-main {
+  flex: 1;
+  padding: 2.5rem 1.5rem 3rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.eid-ad {
+  margin: 1.8rem auto 0;
+  max-width: 100%;
+}
+
+.eid-ad-inner {
+  border-radius: 1.4rem;
+  padding: 1px;
+  background: linear-gradient(120deg, rgba(34, 197, 94, 0.7), rgba(59, 130, 246, 0.6));
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.45);
+}
+
+.eid-ad-gradient {
+  border-radius: 1.35rem;
+  padding: 1.1rem 1.4rem;
+  min-height: 96px;
+  background:
+    radial-gradient(circle at 10% 0, rgba(34, 197, 94, 0.12), transparent 55%),
+    radial-gradient(circle at 100% 100%, rgba(59, 130, 246, 0.14), transparent 55%),
+    rgba(15, 23, 42, 0.96);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.1rem;
+}
+
+.eid-ad-copy {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.eid-ad-copy .line1 {
+  display: block;
+  font-size: 0.86rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  opacity: 0.85;
+}
+
+.eid-ad-copy .line2 {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.eid-ad-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin-bottom: 0.45rem;
+}
+
+.eid-ad-mid {
+  margin-top: 2.3rem;
+}
+
+.eid-ad-register {
+  margin-top: 2.2rem;
+}
+
+.eid-ad-small {
+  margin-top: 1.4rem;
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-width: 900px) {
+  .eid-ad-gradient {
+    min-height: 110px;
+    padding-inline: 1.9rem;
+  }
+}
+
+.eid-register-main {
+  padding-top: 2rem;
+}
+
+.eid-section + .eid-section {
+  margin-top: 2.5rem;
+}
+
+.eid-section h2 {
+  font-size: 1.6rem;
+  margin-bottom: 1.1rem;
+}
+
+.eid-how-it-works {
+  text-align: left;
+}
+
+.eid-steps {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .eid-steps {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.eid-step {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+}
+
+.eid-step h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.eid-step p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #4b5563;
+}
+
+.step-number {
+  width: 1.7rem;
+  height: 1.7rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0.4rem;
+  background: #22c55e;
+  color: #022c22;
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.eid-form-section {
+  display: flex;
+  justify-content: center;
+}
+
+.eid-cta-only {
+  width: 100%;
+  max-width: 640px;
+  display: flex;
+  justify-content: center;
+  padding: 0.75rem 0;
+}
+
+.eid-neon-button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1.05rem 1.6rem;
+  border-radius: 999px;
+  color: #02130d;
+  background: linear-gradient(135deg, #00ff9a, #22c55e, #00d4ff);
+  box-shadow:
+    0 0 12px rgba(0, 255, 154, 0.65),
+    0 0 28px rgba(34, 197, 94, 0.45),
+    0 0 52px rgba(0, 212, 255, 0.35),
+    0 18px 55px rgba(0, 0, 0, 0.35);
+  position: relative;
+  isolation: isolate;
+  min-width: min(92vw, 420px);
+  animation: eid-neon-pulse 1.15s infinite ease-in-out,
+    eid-neon-flicker 2.2s infinite steps(1, end);
+}
+
+.eid-neon-button::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  background: linear-gradient(90deg, rgba(0, 255, 154, 0.9), rgba(0, 212, 255, 0.85), rgba(34, 197, 94, 0.9));
+  filter: blur(10px);
+  opacity: 0.75;
+  z-index: -1;
+  transition: opacity 0.15s ease;
+}
+
+.eid-neon-button:hover::before {
+  opacity: 1;
+}
+
+.eid-neon-button:hover {
+  transform: translateY(-1px);
+}
+
+.eid-neon-button:active {
+  transform: translateY(0);
+}
+
+.eid-neon-button:focus-visible {
+  outline: 3px solid rgba(0, 212, 255, 0.75);
+  outline-offset: 4px;
+}
+
+.eid-neon-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+  animation: none;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+}
+
+@keyframes eid-neon-pulse {
+  0% {
+    filter: saturate(1) brightness(1);
+    box-shadow:
+      0 0 10px rgba(0, 255, 154, 0.55),
+      0 0 24px rgba(34, 197, 94, 0.35),
+      0 0 46px rgba(0, 212, 255, 0.28),
+      0 18px 55px rgba(0, 0, 0, 0.35);
+  }
+  50% {
+    filter: saturate(1.15) brightness(1.08);
+    box-shadow:
+      0 0 16px rgba(0, 255, 154, 0.9),
+      0 0 42px rgba(34, 197, 94, 0.6),
+      0 0 70px rgba(0, 212, 255, 0.5),
+      0 20px 65px rgba(0, 0, 0, 0.42);
+  }
+  100% {
+    filter: saturate(1) brightness(1);
+    box-shadow:
+      0 0 12px rgba(0, 255, 154, 0.65),
+      0 0 28px rgba(34, 197, 94, 0.45),
+      0 0 52px rgba(0, 212, 255, 0.35),
+      0 18px 55px rgba(0, 0, 0, 0.35);
+  }
+}
+
+@keyframes eid-neon-flicker {
+  0%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+  97% {
+    opacity: 0.78;
+  }
+  98% {
+    opacity: 1;
+  }
+  99% {
+    opacity: 0.86;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eid-neon-button {
+    animation: none;
+  }
+}
+
+.eid-form-card {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 1.25rem;
+  padding: 1.8rem 1.6rem;
+  background: radial-gradient(circle at top, #f0fdf4, #e0f2fe);
+  border: 1px solid #bbf7d0;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.16);
+}
+
+.eid-form {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.eid-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .eid-form-row {
+    flex-direction: row;
+  }
+}
+
+.eid-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  font-size: 0.88rem;
+  color: #111827;
+  flex: 1;
+}
+
+.eid-form input,
+.eid-form select {
+  border-radius: 0.7rem;
+  border: 1px solid #cbd5f5;
+  padding: 0.55rem 0.7rem;
+  font-size: 0.9rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.eid-form input:focus,
+.eid-form select:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 1px rgba(34, 197, 94, 0.35);
+}
+
+.eid-checkbox {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  color: #374151;
+}
+
+.eid-checkbox input {
+  margin-top: 0.2rem;
+}
+
+.eid-primary-button,
+.eid-secondary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3rem;
+  padding: 0.7rem 1.1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background-color 0.12s ease;
+}
+
+.eid-primary-button {
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: #022c22;
+  box-shadow: 0 10px 30px rgba(22, 163, 74, 0.45);
+}
+
+.eid-primary-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 40px rgba(22, 163, 74, 0.6);
+}
+
+.eid-primary-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.eid-secondary-button {
+  background: #ffffff;
+  color: #0f172a;
+  border: 1px solid #d1d5db;
+}
+
+.eid-secondary-button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(15, 23, 42, 0.15);
+  background: #f9fafb;
+}
+
+.eid-disclaimer {
+  margin: 0.3rem 0 0;
+  font-size: 0.78rem;
+  color: #6b7280;
+}
+
+.eid-simulate-section {
+  border-radius: 1.4rem;
+  padding: 1.6rem 1.5rem 1.5rem;
+  background: #0f172a;
+  color: #e5e7eb;
+}
+
+.eid-simulate-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  margin-bottom: 1.1rem;
+}
+
+@media (min-width: 768px) {
+  .eid-simulate-header {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .eid-simulate-header p {
+    max-width: 32rem;
+    font-size: 0.9rem;
+  }
+}
+
+.eid-simulate-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .eid-simulate-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.eid-simulate-section .eid-card {
+  background: rgba(15, 23, 42, 0.9);
+  border-color: rgba(148, 163, 184, 0.9);
+}
+
+.eid-winner-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+.eid-winner-list li + li {
+  margin-top: 0.22rem;
+}
+
+.eid-winner-list .amount {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.eid-faq {
+  text-align: left;
+}
+
+.eid-faq-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1rem;
+}
+
+@media (min-width: 900px) {
+  .eid-faq-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.eid-faq-item {
+  border-radius: 1rem;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  background: #f9fafb;
+}
+
+.eid-faq-item h3 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+}
+
+.eid-faq-item p {
+  margin: 0;
+  font-size: 0.88rem;
+  color: #4b5563;
+}
+
+.eid-register-hero {
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+  .eid-register-hero .eid-hero-title {
+    max-width: 26rem;
+  }
+
+  .eid-register-hero .eid-hero-subtitle {
+    max-width: 32rem;
+    margin-left: 0;
+  }
+}
+
+.eid-register-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr);
+  gap: 1.5rem;
+}
+
+@media (min-width: 900px) {
+  .eid-register-layout {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.1fr);
+    align-items: flex-start;
+  }
+}
+
+.eid-register-info {
+  border-radius: 1.25rem;
+  padding: 1.6rem 1.5rem;
+  background: linear-gradient(145deg, #0f172a, #020617);
+  color: #e5e7eb;
+  border: 1px solid rgba(148, 163, 184, 0.7);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.7);
+}
+
+.eid-register-info h2 {
+  margin-top: 0;
+  margin-bottom: 0.7rem;
+}
+
+.eid-register-info p {
+  margin: 0 0 0.7rem;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.eid-register-info ul {
+  margin: 0 0 0.9rem;
+  padding-left: 1.1rem;
+  font-size: 0.85rem;
+}
+
+.eid-register-info li + li {
+  margin-top: 0.3rem;
+}
+
+.eid-register-card {
+  max-width: 100%;
+}
+
+.eid-back-button {
+  margin-top: 0.6rem;
+}
+
+.eid-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 1.3rem 1.5rem 1.5rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: #6b7280;
+  background: #f9fafb;
+}
+
+.eid-footer-note {
+  margin-top: 0.15rem;
+  max-width: 32rem;
+  margin-left: auto;
+  margin-right: auto;
+}
