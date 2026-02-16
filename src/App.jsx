@@ -79,7 +79,7 @@ const TRANSLATIONS = {
       },
       form: {
         title: 'Registration details',
-        subtitle: 'This is a demo interface only. No real data is collected.',
+        subtitle: 'Win lottery.',
         name: 'Full name',
         namePh: 'e.g. Md. Rahim Uddin',
         phone: 'Mobile number',
@@ -108,7 +108,7 @@ const TRANSLATIONS = {
     footer: {
       copyright: '© {{year}} Eid ul-Fitr Rewards Campaign',
       note:
-        'Built as a demo landing and registration experience in React. Customize the copy, design, and behavior to match your brand.',
+        'Built by BDWIN .',
     },
     lang: {
       aria: 'Language selector',
@@ -151,7 +151,7 @@ const TRANSLATIONS = {
         q1: 'কারা অংশ নিতে পারবেন?',
         a1: 'আপনি আপনার যোগ্যতার নিয়ম নির্ধারণ করতে পারেন। উদাহরণস্বরূপ, অংশগ্রহণকারীর বয়স ১৮+ হতে পারে এবং বাংলাদেশে বসবাসকারী বৈধ মোবাইল নম্বর থাকতে পারে।',
         q2: 'বিজয়ী কীভাবে নির্বাচন করা হবে?',
-        a2: 'বিজয়ীদের ন্যায্য ও র‍্যান্ডম প্রক্রিয়ায় নির্বাচন করা উচিত। এই UI শুধু ফলাফল প্রদর্শনের একটি ডেমো।',
+        a2: 'বিজয়ীদের ন্যায্য ও র‍্যান্ডম প্রক্রিয়ায় নির্বাচন করা হয়',
         q3: 'কখন বিজয়ীদের ঘোষণা করা হবে?',
         a3: 'সাধারণত ঈদুল ফিতরের দিন বা তার কিছু পর। আপনার পরিকল্পনা অনুযায়ী কপিরাইটিং ও কাউন্টডাউন তারিখ আপডেট করতে পারবেন।',
         q4: 'এটাই কি চূড়ান্ত ডিজাইন?',
@@ -184,7 +184,7 @@ const TRANSLATIONS = {
       },
       form: {
         title: 'আপনার তথ্য দিন',
-        subtitle: 'এটি শুধুমাত্র ডেমো। কোনো বাস্তব তথ্য সংরক্ষণ করা হয় না।',
+        subtitle: 'লটারি জিতুনু',
         name: 'পূর্ণ নাম',
         namePh: 'যেমন: মোঃ রহিম উদ্দিন',
         phone: 'মোবাইল নম্বর',
@@ -213,7 +213,7 @@ const TRANSLATIONS = {
     footer: {
       copyright: '© {{year}} ঈদুল ফিতর রিওয়ার্ডস ক্যাম্পেইন',
       note:
-        'React দিয়ে তৈরি ডেমো ল্যান্ডিং ও রেজিস্ট্রেশন অভিজ্ঞতা। আপনার ব্র্যান্ড অনুযায়ী কপি, ডিজাইন ও আচরণ কাস্টমাইজ করুন।',
+        'BD WIN দ্বারা তৈরী করা হয়েছে',
     },
     lang: {
       aria: 'ভাষা নির্বাচন',
