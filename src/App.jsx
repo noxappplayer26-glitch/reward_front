@@ -1,8 +1,12 @@
 import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react'
+import { Analytics } from "@vercel/analytics/react"
 import { Routes, Route, useNavigate, Link } from 'react-router-dom'
 import backgroundVisual from './assets/background.png'
 import logo from './assets/logo.png'
 import './App.css'
+
+<Analytics/>
+
 
 const API_BASE_URL =
   import.meta.env.VITE_API_BASE_URL ||
